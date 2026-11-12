@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SankofaTech | Educação das Relações Étnico-Raciais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO E MENU DE NAVEGAÇÃO -->
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Logo SankofaTech" class="logo-img" onerror="this.style.display='none'">
+      <span class="brand-name">Sankofa<span>Tech</span></span>
+    </div>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">☰</button>
+
+    <nav class="nav-links" id="nav-links">
+      <button class="nav-btn active" data-target="inicio">Início</button>
+      <button class="nav-btn" data-target="biografias">Protagonismo</button>
+      <button class="nav-btn" data-target="ciencia">Cultura & Ciência</button>
+      <button class="nav-btn" data-target="glossario">Glossário ERER</button>
+      <button class="nav-btn" data-target="quiz">Quiz Gamificado</button>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL (SPA - NAVEGAÇÃO DINÂMICA) -->
+  <main class="container">
+
+    <!-- SEÇÃO INICIAL -->
+    <section id="inicio" class="page-section active">
+      <div class="hero">
+        <div class="hero-text">
+          <span class="badge">Tecnologia & Ancestralidade</span>
+          <h1>Inovação Tecnológica com Consciência Étnico-Racial</h1>
+          <p>
+            O <strong>SankofaTech</strong> conecta o passado ancestral de matrizes africanas e povos originários ao futuro da tecnologia. Explore biografias históricas, descobertas científicas e teste seus conhecimentos no nosso desafio interativo.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="navegarPara('biografias')">Explorar Conteúdos</button>
+            <button class="btn-secondary" onclick="navegarPara('quiz')">Iniciar Quiz</button>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="assets/hero.png" alt="Ilustração temática ERER" class="hero-img" onerror="this.src='https://placehold.co/500x350/27272A/D99B26?text=Ilustracao+IA+SankofaTech'">
+        </div>
+      </div>
+    </section>
+
+    <!-- EIXO A: BIOGRAFIAS E PROTAGONISMO -->
+    <section id="biografias" class="page-section">
+      <div class="section-header">
+        <h2>Eixo A: Biografias e Protagonismo</h2>
+        <p>Personalidades negras e indígenas fundamentais para a história, ciência e resistência do Brasil.</p>
+      </div>
+      <div class="cards-grid" id="grid-biografias">
+        <!-- Preenchido dinamicamente via JavaScript -->
+      </div>
+    </section>
+
+    <!-- EIXO B: CULTURA E CIÊNCIA -->
+    <section id="ciencia" class="page-section">
+      <div class="section-header">
+        <h2>Eixo B: Cultura, Ciência e Tecnologia Ancestral</h2>
+        <p>Contribuições científicas, matemáticas, arquitetônicas e sustentáveis de matrizes africanas e indígenas.</p>
+      </div>
+      <div class="cards-grid" id="grid-ciencia">
+        <!-- Preenchido dinamicamente via JavaScript -->
+      </div>
+    </section>
+
+    <!-- EIXO C: GLOSSÁRIO PESQUISÁVEL EM TEMPO REAL -->
+    <section id="glossario" class="page-section">
+      <div class="section-header">
+        <h2>Eixo C: Glossário de Letramento Racial</h2>
+        <p>Pesquise termos essenciais para compreender e combater o racismo estrutural.</p>
+      </div>
+      
+      <div class="search-box">
+        <input type="text" id="busca-glossario" placeholder="Digite um termo (ex: Equidade, Ancestralidade, Racismo Estrutural)...">
+      </div>
+
+      <div class="glossario-lista" id="lista-glossario">
+        <!-- Preenchido e filtrado em tempo real via JavaScript -->
+      </div>
+    </section>
+
+    <!-- RECURSO INOVADOR 2: QUIZ GAMIFICADO -->
+    <section id="quiz" class="page-section">
+      <div class="section-header">
+        <h2>Desafio Sankofa: Quiz Interativo</h2>
+        <p>Teste seus conhecimentos sobre história, ciência e letramento racial.</p>
+      </div>
+
+      <div class="quiz-box" id="quiz-container">
+        <div class="quiz-status">
+          <span id="quiz-progresso">Pergunta 1 de 5</span>
+          <span id="quiz-pontos">Pontuação: 0</span>
+        </div>
+        <h3 id="quiz-pergunta">Carregando pergunta...</h3>
+        <div class="quiz-opcoes" id="quiz-opcoes"></div>
+        <div id="quiz-feedback" class="feedback-msg"></div>
+        <button id="btn-proxima" class="btn-primary hidden">Próxima Pergunta</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ COM IDENTIFICAÇÃO DOS DESENVOLVEDORES -->
+  <footer class="footer">
+    <p><strong>SankofaTech</strong> — Protótipo Web Educativo (Diretrizes ERER & IA)</p>
+    <p class="devs">
+      Desenvolvido por: <strong>[Pedro Cenci]</strong>, <strong>[Victor]</strong> e <strong>[Bruno]</strong> — Técnico em Desenvolvimento de Sistemas (2026)
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
